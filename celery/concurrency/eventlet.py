@@ -123,6 +123,7 @@ class TaskPool(base.BasePool):
 
     def on_apply(self, target, args=None, kwargs=None, callback=None,
                  accept_callback=None, **_):
+        print("START V1")
         if len(args) > 1 and len(args[1]) == 36:
             celery_id = args[1]
         else:
